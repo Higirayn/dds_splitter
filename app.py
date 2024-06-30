@@ -74,6 +74,12 @@ def start_splitting():
 root = tk.Tk()
 root.title("DDS Splitter")
 
+icon_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Logo.ico")
+if os.path.exists(icon_path):
+    root.iconbitmap(icon_path)
+else:
+    messagebox.showwarning("Предупреждение", f"Иконка не найдена: {icon_path}")
+
 frame = tk.Frame(root, padx=10, pady=10)
 frame.pack()
 
